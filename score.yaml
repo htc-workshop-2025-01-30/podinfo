@@ -13,8 +13,8 @@ containers:
   podinfo:
     image: . # Set by pipeline
     variables:
-      PODINFO_UI_COLOR: "#34577c"
-      PODINFO_UI_MESSAGE: ""
+      PODINFO_UI_COLOR: "#347c63"
+      PODINFO_UI_MESSAGE: "New features: color and redis!"
 
 resources:
   dns: # We need a DNS record to point to the service 
@@ -25,3 +25,5 @@ resources:
       host: ${resources.dns.host}
       path: /
       port: 80
+  my-redis:
+    type: redis
